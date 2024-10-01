@@ -1,0 +1,328 @@
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #d9534f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .nav {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.content-container {
+  margin-left: 250px; /* 与侧边栏宽度相同 */
+  padding: 40px 60px; /* 上下40px，左右60px的内边距 */
+  width: calc(100% - 250px); /* 总宽度减去侧边栏宽度 */
+  min-height: 100vh; /* 确保内容区至少和视口一样高 */
+  box-sizing: border-box; /* 确保padding不会增加元素的总宽度 */
+}
+
+section {
+  height: 100vh; /* 每个部分占满整个视口高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中内容 */
+  padding: 20px;
+  box-sizing: border-box; /* 确保 padding 不影响高度计算 */
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  padding: 40px 0;
+}
+
+.about-content {
+  max-width: 100%; /* 移除最大宽度限制 */
+  margin: 0; /* 移除自动边距 */
+  text-align: left; /* 文本左对齐 */
+}
+
+.name {
+  font-size: 48px; /* 调整为与其他部分标题一致的大小 */
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1;
+  text-transform: uppercase; /* 与其他部分标题保持一致 */
+}
+
+.first-name {
+  color: #343a40;
+}
+
+.last-name {
+  color: #0d6efd;
+}
+
+.contact-info {
+  font-size: 16px; /* 调整字体大小 */
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.email {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.bio {
+  font-size: 18px; /* 调整字体大小 */
+  color: #6c757d;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: flex-start; /* 左对齐 */
+  gap: 10px; /* 图标之间的间距，可以根据需要调整 */
+  margin-top: 20px; /* 与上方内容的间距 */
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #495057;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #0d6efd;
+}
+
+.education-section {
+  padding: 40px 0;
+}
+
+.education-section h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.education-entry {
+  margin-bottom: 40px;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.institution {
+  font-size: 24px;
+  font-weight: 700;
+  color: #343a40;
+  margin: 0;
+}
+
+.period {
+  font-size: 16px;
+  color: #bd5d38;
+  font-weight: 500;
+}
+
+.degree {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin: 10px 0 5px 0;
+  font-weight: 500;
+}
+
+.details, .gpa {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.experience-section {
+  padding: 40px 0;
+}
+
+.experience-section h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.experience-entry {
+  margin-bottom: 40px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 24px;
+  font-weight: 700;
+  color: #343a40;
+  margin: 0;
+}
+
+.period {
+  font-size: 16px;
+  color: #bd5d38;
+  font-weight: 500;
+}
+
+.company {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin: 10px 0 5px 0;
+  font-weight: 500;
+}
+
+.description {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.description li {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+
+.projects-section {
+  padding: 40px 0;
+}
+
+.projects-section h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.project-entry {
+  margin-bottom: 40px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.project-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #343a40;
+  margin: 0;
+}
+
+.period {
+  font-size: 16px;
+  color: #bd5d38;
+  font-weight: 500;
+}
+
+.project-description {
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.project-details {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.project-details li {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+
+.skills-section {
+  padding: 40px 0;
+}
+
+.skills-section h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.skills-content h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin: 20px 0 10px;
+  font-weight: 500;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.skills-icons i {
+  font-size: 48px;
+  color: #6c757d;
+}
+
+.workflow-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.workflow-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.workflow-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #bd5d38;
+}

@@ -1,0 +1,35 @@
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #d9534f;
+  color: white;
+  padding: 20px;
+}
+
+.content-container {
+  margin-left: 250px; /* 为内容区域预留出侧栏的空间 */
+  padding: 20px;
+  overflow-y: auto; /* 启用滚动 */
+  width: calc(100% - 250px); /* 设置内容区域的宽度 */
+}
+
+section {
+  height: 100vh; /* 每个部分占满整个视口高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中内容 */
+  padding: 20px;
+  box-sizing: border-box; /* 确保 padding 不影响高度计算 */
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
