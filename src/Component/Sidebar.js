@@ -1,17 +1,20 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import profileImage from '../phone_YBT.jpg';  // 导入图片
 
 const Sidebar = ({ onHover }) => {
     return (
-      <div className="sidebar bg-primary text-white vh-100 p-3">
-        <div className="text-center mb-4">
-            <img 
-            src="your-image-url" 
-            alt="Profile" 
-            className="rounded-circle" 
-            width="80" 
+      <div className="sidebar">
+        {/* Profile 图片部分 */}
+        <div className="text-center">
+          <img 
+              src={profileImage}
+              alt="Profile"
+              className="profile-image"
             />
         </div>
+        
+        {/* 导航菜单部分 */}
         <Nav className="flex-column">
           <Nav.Link 
             href="#about" 
@@ -39,7 +42,7 @@ const Sidebar = ({ onHover }) => {
             className="text-white" 
             onMouseEnter={() => onHover('projects')}
           >
-            projects
+            Projects
           </Nav.Link>
           <Nav.Link 
             href="#skills" 
@@ -58,6 +61,6 @@ const Sidebar = ({ onHover }) => {
         </Nav>
       </div>
     );
-  };
+};
 
 export default Sidebar;

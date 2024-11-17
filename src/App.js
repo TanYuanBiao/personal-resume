@@ -1,12 +1,10 @@
-
+import React, { useState, useRef } from 'react';
 import Sidebar from './Component/Sidebar';
 import Content from './Component/Content';
 import './App.css';
-import React, { useRef } from 'react';
-
 
 function App() {
-  // 创建 ref 对象，存储各个 section 的引用
+  const [activeSection, setActiveSection] = useState('about');
   const sectionRefs = {
     about: useRef(null),
     experience: useRef(null),
@@ -17,7 +15,7 @@ function App() {
   };
 
   const handleHover = (id) => {
-    // 使用 ref 对象而不是 document.getElementById
+    setActiveSection(id);
     const element = sectionRefs[id].current;
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -26,11 +24,12 @@ function App() {
 
   return (
     <div className="app-container d-flex">
-      <Sidebar onHover={handleHover} />
-      <div className="content-container flex-grow-1">
-        <Content ref={sectionRefs} />
+      <Sidebar onHover={handleHover} activeSection={activeSection} />
+      <div className="content-container">
+        <Content ref={sectionRefs} activeSection={activeSection} />
       </div>
     </div>
   );
 }
+
 export default App;

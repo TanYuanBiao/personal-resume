@@ -14,9 +14,12 @@ const Content = React.forwardRef((props, ref) => {
             <span>University of Nottingham · (+44) 7444454543 · </span>
             <a href="mailto:NAME@EMAIL.COM" className="email">yb_tan@outlook.com</a>
           </div>
-          <p className="bio">
-          I have 2 years experience as a java developer, mainly developing java web systems, and I am currently studying for a Masters in Computing (2 years) at the University of Nottingham. I plan to graduate in the summer of 2025.
-          </p>
+          <p className="bio">Hello, I'm Tan, a dynamic and results-oriented Software Engineering graduate with a strong foundation in Computer Science from the University of Nottingham. I am passionate about creating impactful software solutions and leveraging emerging technologies to drive meaningful change.</p>
+
+          <p className="bio">With extensive experience in Java, Python, C#, JavaScript, HTML, and CSS, I am skilled in both backend and frontend development, as well as areas such as Object-Oriented Programming and SQL. I have hands-on expertise with tools like Git, JavaFX, MVC, Android, Jira, MySQL, Maven, and Gradle, which equip me to develop and maintain high-quality applications in agile and DevOps-driven environments.</p>
+
+          <p className="bio">I am a proactive learner, dedicated to continuous growth and skill development. My strengths in communication, teamwork, and problem-solving allow me to thrive in collaborative settings, and I am always open to tackling complex challenges that push my capabilities. If you’re looking for a dedicated software engineer with a commitment to excellence and a passion for technology, I’d love to connect and explore potential collaboration opportunities.</p>
+          
           <div className="social-links">
             <a href="https://www.linkedin.com/in/yuanbiao-tan-5a2489282" className="social-icon linkedin" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/TanYuanBiao" className="social-icon github" aria-label="GitHub"><i className="fab fa-github"></i></a>
@@ -60,11 +63,10 @@ const Content = React.forwardRef((props, ref) => {
             <h4 className="company">Allegis Group (TEK system), china, Guangzhou</h4>
             <ul className="description">
               <li>Engaged with HSBC as an outsourcer for development work.</li>
+              <li>Served as a key member of an agile scrum team, responsible for developing applications.</li>
               <li>Utilized Java/J2EE technologies to develop web applications for client-server environments, focusing on developing a new model for HSBC's Risk Foundation system.</li>
-              <li>Ensured the functionality of Risk Foundation was accessible to teams in various locations such as India, Canada, and the UK.</li>
-              <li>Conducted user requirements analysis to design and program applications, delivering support for system enhancements.</li>
-              <li>Served as a key member of an agile scrum team, responsible for developing new applications using the Spring framework.</li>
-              <li>Consulted with clients on project status and technical concerns, supported system testing, and identified over 70 upgrades and fixes.</li>
+              <li>Ensured the functionality of Risk Foundation was accessible to teams in various locations such as India, Canada, and the UK, while implementing a comprehensive monitoring system to track service status in real-time and provide prompt support during service interruptions or errors, maximizing system availability.</li>
+              <li>Consulted with user on project status and technical concerns, supported system testing, and identified over 70 upgrades and fixes.</li>
             </ul>
           </div>
         </section>
@@ -83,44 +85,60 @@ const Content = React.forwardRef((props, ref) => {
             <ul className="project-details">
               <li>Developed and deployed an online system utilizing Spring, JavaScript, and Oracle database.</li>
               <li>Developed RESTful APIs for managing search, insert, remove, and update operations on the Oracle database.</li>
-              <li>Optimized modules with poor performance to enhance the running time of the program, such as SQL optimization, and implemented message queues to decouple the system and improve throughput.</li>
+              <li>Optimized critical SQL queries using EXPLAIN PLAN, implementing indexing and query restructuring, resulting in 80% reduction in execution time and improved system performance.</li>
+              <li>Implemented RabbitMQ to decouple critical data processing components, reducing peak load response times by 35% and increasing system throughput by 28%, while enhancing fault tolerance during high-traffic periods.</li>
+              <li>Played a key role in modernizing a legacy JSP-based application to a React frontend with Spring Boot backend, implementing a RESTful API architecture. This full-stack overhaul reduced page load time by 50% and decreased server response time by 40%. achieved a 92% post-launch user satisfaction rate.</li>
             </ul>
           </div>
-        </section>
 
-        <section ref={ref.skills} id="skills">
-          <div className="skills-content">
-            <h3>PROGRAMMING LANGUAGES & TOOLS</h3>
-            <div className="skills-icons">
-              {/* 这里应该放置相应的技能图标 */}
-              <i className="devicon-html5-plain" title="HTML5"></i>
-              <i className="devicon-css3-plain" title="CSS3"></i>
-              <i className="devicon-javascript-plain" title="JavaScript"></i>
-              <i className="devicon-angularjs-plain" title="Angular"></i>
-              <i className="devicon-react-original" title="React"></i>
-              <i className="devicon-nodejs-plain" title="Node.js"></i>
-              <i className="devicon-sass-original" title="Sass"></i>
-              <i className="devicon-less-plain-wordmark" title="Less"></i>
-              <i className="devicon-wordpress-plain" title="WordPress"></i>
-              <i className="devicon-gulp-plain" title="Gulp"></i>
-              <i className="devicon-grunt-plain" title="Grunt"></i>
-              <i className="devicon-npm-original-wordmark" title="npm"></i>
+          <div className="project-entry">
+            <div className="project-header">
+              <h3 className="project-name">SQL Generator (Personal Project)</h3>
+              <span className="period">Sep 2023 – May 2024</span>
             </div>
-
-            <h3>WORKFLOW</h3>
-            <ul className="workflow-list">
-              <li>Mobile-First, Responsive Design</li>
-              <li>Cross Browser Testing & Debugging</li>
-              <li>Cross Functional Teams</li>
-              <li>Agile Development & Scrum</li>
+            <p className="project-description">
+              This project is a tool that efficiently generates database schema definitions, mock data, and boilerplate code through a user-friendly visual interface. It was developed to automate repetitive tasks and accelerate the development lifecycle.
+            </p>
+            <ul className="project-details">
+              <li>Utilized a front-end stack incorporating HTML, React, Ant Design, and UMI for the project, while leveraging Spring Boot and MySQL for the back-end architecture.</li>
+              <li>Implemented a solution utilizing FreeMarker for template-based generation of SQL scripts, JSON payloads, and Java entity classes. Integrated the DataFaker framework to facilitate bulk generation of synthetic data, addressing the challenge of populating test environments with realistic datasets.</li>
             </ul>
           </div>
         </section>
+
+        <section id="skills" ref={ref.skills}>
+            <h2>Skills</h2>
+            <div className="skills-content">
+              <div className="skill-category">
+                <h3>Software and tools</h3>
+                <p>Eclipse, idea, VS Code, Linux, Jenkins, Git, Kubernetes, Docker, Postman</p>
+              </div>
+              
+              <div className="skill-category">
+                <h3>Databases</h3>
+                <p>Oracle, MySQL, Redis, Mongo DB</p>
+              </div>
+              
+              <div className="skill-category">
+                <h3>Programming</h3>
+                <p>Python, Java, JavaScript, Spring boot, JSP, SQL, HTML, XML, React</p>
+              </div>
+            </div>
+          </section>
         
-        <section ref={ref.interests} id="interests">
-          <h2>Interests</h2>
-          <p>Details about interests...</p>
-        </section>
+          <section id="interests" ref={ref.interests} >
+            <h2>Interests</h2>
+            <div className="interests-content">
+              <p>Outside of my professional work in software development, I am passionate about:</p>
+              <ul className="interests-list">
+                <li>Tech Innovation: Following the latest developments in AI, cloud computing, and emerging technologies.</li>
+                <li>Sports: Regularly playing basketball and badminton to maintain physical fitness and team spirit.</li>
+                <li>Photography: Capturing moments and exploring urban landscapes through street photography.</li>
+                <li>Reading: Enjoying both technical books on software architecture and science fiction novels.</li>
+                <li>Travel: Exploring different cultures and gaining new perspectives through international travel.</li>
+              </ul>
+            </div>
+          </section>
         
         
       </div>
